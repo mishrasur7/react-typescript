@@ -1,24 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
 function App() {
+  let amount:number = 10
+  let item:string = 'apple'
+  let unitPrice:number = 2
+  let totalPrice:number = amount* unitPrice
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Product: {item}</h1>
+      <h2>Unit price: {unitPrice}</h2>
+      <h2>Total Price: {totalPrice}</h2>
     </div>
   );
 }

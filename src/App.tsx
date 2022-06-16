@@ -29,6 +29,26 @@ function App() {
 // type Arrayish = {[n: number]: unknown} 
 //   type A = keyof Arrayish
 // console.log(type A)
+class Employee {
+  private name:string
+  job:string
+  constructor(name:string, job:string) {
+    this.name = name
+    this.job = job
+  }
+
+  sayHello() {
+    console.log(`Hello ${this.name}`)
+  }
+
+  get detail () {
+    return `${this.name} is a ${this.job}`
+  }
+}
+
+const employee1 = new Employee('suraj', 'developer')
+employee1.sayHello()
+console.log(employee1.detail)
 
 
  

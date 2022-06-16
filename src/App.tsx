@@ -10,6 +10,12 @@ function App() {
   }
   myFuntion(5, 15)
 
+  
+  const test = (function yourFunction() {
+    setTimeout(() => console.log('suraj'), 3000)
+  })()
+ 
+
   return (
     <div className="App">
       <h1>Product: {item}</h1>

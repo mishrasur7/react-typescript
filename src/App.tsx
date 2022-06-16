@@ -4,6 +4,12 @@ function App() {
   let item:string = 'apple'
   let unitPrice:number = 2
   let totalPrice:number = amount* unitPrice
+
+  function myFuntion(parameterA:number, parameterB:number)  {
+    console.log(parameterA + parameterB)
+  }
+  myFuntion(5, 15)
+
   return (
     <div className="App">
       <h1>Product: {item}</h1>

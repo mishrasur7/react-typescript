@@ -1,4 +1,3 @@
-
 function App() {
   // let amount:number = 10
   // let item:string = 'apple'
@@ -10,7 +9,6 @@ function App() {
   // }
   // myFuntion(5, 15)
 
-  
   // const test = (function yourFunction() {
   //   setTimeout(() => console.log('suraj'), 3000)
   // })()
@@ -18,40 +16,51 @@ function App() {
   // let str: Object = 'string type'
   // str.toUpperCase() //error
 
+  // function getPro<Type, Key extends keyof Type> (obj: Type, key: Key) {
+  //   return obj[key]
+  // }
+  // let x = {a:1, b: 2, c: 3, d: 4}
+  // const a = getPro(x, 'm')
+  // console.log(a)
 
-// function getPro<Type, Key extends keyof Type> (obj: Type, key: Key) {
-//   return obj[key]
-// }
-// let x = {a:1, b: 2, c: 3, d: 4}
-// const a = getPro(x, 'm')
-// console.log(a)
+  // type Arrayish = {[n: number]: unknown}
+  //   type A = keyof Arrayish
+  // console.log(type A)
+  class Employee {
+    private name: string;
+    job: string;
+    constructor(name: string, job: string) {
+      this.name = name;
+      this.job = job;
+    }
 
-// type Arrayish = {[n: number]: unknown} 
-//   type A = keyof Arrayish
-// console.log(type A)
-class Employee {
-  private name:string
-  job:string
-  constructor(name:string, job:string) {
-    this.name = name
-    this.job = job
+    sayHello() {
+      console.log(`Hello ${this.name}`);
+    }
+
+    get detail() {
+      return `${this.name} is a ${this.job}`;
+    }
   }
 
-  sayHello() {
-    console.log(`Hello ${this.name}`)
+  const employee1 = new Employee("suraj", "developer");
+  employee1.sayHello();
+  console.log(employee1.detail);
+
+  class Candidate {
+    constructor(
+      private name: string = name,
+      private age: number = age,
+      private phoneNumber: number = phoneNumber,
+      private email: string = email,
+      private skills: string[] = skills
+    ) {}
+
+    doContact() {
+      const message:string= 'Please mention your message here'
+      
+    }
   }
-
-  get detail () {
-    return `${this.name} is a ${this.job}`
-  }
-}
-
-const employee1 = new Employee('suraj', 'developer')
-employee1.sayHello()
-console.log(employee1.detail)
-
-
- 
 
   return (
     <div className="App">

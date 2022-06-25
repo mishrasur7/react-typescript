@@ -26,7 +26,7 @@ function App() {
   // type Arrayish = {[n: number]: unknown}
   //   type A = keyof Arrayish
   // console.log(type A)
-  class Employee {
+  /* class Employee {
     private name: string;
     job: string;
     constructor(name: string, job: string) {
@@ -61,7 +61,19 @@ function App() {
       
     }
   }
+ */
 
+  function wrapInArray(obj: string | string[]) {
+    if (typeof obj === "string") {
+      return [obj];
+    }
+    return obj;
+  }
+
+  const testArray = wrapInArray('suraj')
+  console.log(testArray)
+  const testString = wrapInArray(['mishra', 'pandey'])
+  console.log(testString)
   return (
     <div className="App">
       {/* <h1>Product: {item}</h1>

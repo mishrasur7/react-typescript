@@ -63,7 +63,7 @@ function App() {
   }
  */
 
-  function wrapInArray(obj: string | string[]) {
+/*   function wrapInArray(obj: string | string[]) {
     if (typeof obj === "string") {
       return [obj];
     }
@@ -73,7 +73,21 @@ function App() {
   const testArray = wrapInArray('suraj')
   console.log(testArray)
   const testString = wrapInArray(['mishra', 'pandey'])
-  console.log(testString)
+  console.log(testString) */
+
+  interface Point {
+    x: number;
+    y: number;
+  }
+   
+  function logPoint(p: Point) {
+    console.log(`${p.x}, ${p.y}`);
+  }
+   
+  // logs "12, 26"
+  const point = { x: 12, y: 26 };
+  logPoint(point);
+
   return (
     <div className="App">
       {/* <h1>Product: {item}</h1>

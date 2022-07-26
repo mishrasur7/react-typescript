@@ -88,6 +88,12 @@ function App() {
   const point = { x: 12, y: 26 };
   logPoint(point);
 
+  type role = 'guest'| 'admin'
+
+  interface User {
+    
+  }
+
   return (
     <div className="App">
       {/* <h1>Product: {item}</h1>

@@ -104,6 +104,13 @@ function App() {
   width: number
  }
 
+ const area = (d: dimensions) => {
+  console.log(d.length * d.width)
+ }
+
+ 
+
+
   
   return (
     <div className="App">

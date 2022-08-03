@@ -88,16 +88,21 @@ function App() {
   const point = { x: 12, y: 26 };
   logPoint(point);
 
-  type Role = 'guest'| 'admin'
+  // type Role = 'guest'| 'admin'
 
-  interface User {
-    firstName: string, 
-    lastName: string, 
-    email: string, 
-    password: string, 
-    avatar: string, 
-    role: Role
-  }
+  // interface User {
+  //   firstName: string, 
+  //   lastName: string, 
+  //   email: string, 
+  //   password: string, 
+  //   avatar: string, 
+  //   role: Role
+  // }
+
+ interface dimensions {
+  length: number
+  width: number
+ }
 
   
   return (

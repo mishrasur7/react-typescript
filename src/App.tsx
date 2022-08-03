@@ -107,8 +107,14 @@ function App() {
  const area = (d: dimensions) => {
   console.log(d.length * d.width)
  }
-
  
+ const dimensions = {
+  length: 10, 
+  width: 20
+ }
+
+ area(dimensions)
+
 
 
   

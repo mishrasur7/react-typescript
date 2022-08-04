@@ -115,6 +115,20 @@ function App() {
 
  area(dimensions)
 
+ interface circle {
+  radius: number
+ }
+
+ const circleArea = (c: circle) => {
+  console.log(Math.PI * Math.pow(c.radius, 2))
+ }
+
+ const circleRadius = {
+  radius: 2
+ }
+
+ circleArea(circleRadius)
+
 
 
   

@@ -134,7 +134,12 @@ function App() {
  interface Vehicle {
   model: Model,
   registrationNo: string, 
-  manufacture: string
+  manufacture: string,
+  registrationYear: number
+ }
+
+ interface BMW extends Vehicle {
+  avatar: string
  }
 
  

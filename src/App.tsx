@@ -129,6 +129,16 @@ function App() {
 
  circleArea(circleRadius)
 
+ type Model = 'A'|'B'|'C'
+
+ interface Vehicle {
+  model: Model,
+  registrationNo: string, 
+  manufacture: string
+ }
+
+ 
+
 
 
   

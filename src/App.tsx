@@ -142,21 +142,39 @@ function App() {
 //   avatar: string
 //  }
 
-let myArr = ['12-24-2014', '09-23-2022', '12-30-2021', '07-15-2018']
+// let myArr = ['12-24-2014', '09-23-2022', '12-30-2021', '07-15-2018']
 
-const fixDate = (array: any) => {
-  for(let i = 0; i < array.length; i++) {
-    const date = new Date(array[i])
-    const newFormat = `${date.getDate()}-${date.getMonth()}-${date.getFullYear()}`
-    array[i] = newFormat
+// const fixDate = (array: any) => {
+//   for(let i = 0; i < array.length; i++) {
+//     const date = new Date(array[i])
+//     const newFormat = `${date.getDate()}-${date.getMonth()}-${date.getFullYear()}`
+//     array[i] = newFormat
+//   }
+//   return array
+// }
+
+
+// console.log('suraj')
+
+// console.log(fixDate(myArr))
+
+const isPrime = (num:any) => {
+  if(num === 1) {
+    return false
+  } else if(num === 2) {
+    return true
+  } else {
+    for(let i = 2; i < num; i++) {
+      if(num % i === 0) {
+        return false
+      } else {
+        return true
+      }
+    }
   }
-  return array
 }
 
-
-console.log('suraj')
-
-console.log(fixDate(myArr))
+console.log(isPrime(6))
 
   
   return (

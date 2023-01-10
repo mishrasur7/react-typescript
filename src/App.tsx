@@ -75,18 +75,18 @@ function App() {
   const testString = wrapInArray(['mishra', 'pandey'])
   console.log(testString) */
 
-  interface Point {
-    x: number;
-    y: number;
-  }
+  // interface Point {
+  //   x: number;
+  //   y: number;
+  // }
    
-  function logPoint(p: Point) {
-    console.log(`${p.x}, ${p.y}`);
-  }
+  // function logPoint(p: Point) {
+  //   console.log(`${p.x}, ${p.y}`);
+  // }
    
-  // logs "12, 26"
-  const point = { x: 12, y: 26 };
-  logPoint(point);
+  // // logs "12, 26"
+  // const point = { x: 12, y: 26 };
+  // logPoint(point);
 
   // type Role = 'guest'| 'admin'
 
@@ -99,52 +99,64 @@ function App() {
   //   role: Role
   // }
 
- interface dimensions {
-  length: number
-  width: number
- }
+//  interface dimensions {
+//   length: number
+//   width: number
+//  }
 
- const area = (d: dimensions) => {
-  console.log(`total area ${d.length * d.width}`)
- }
+//  const area = (d: dimensions) => {
+//   console.log(`total area ${d.length * d.width}`)
+//  }
  
- const dimensions = {
-  length: 10, 
-  width: 20
- }
+//  const dimensions = {
+//   length: 10, 
+//   width: 20
+//  }
 
- area(dimensions)
+//  area(dimensions)
 
- interface circle {
-  radius: number
- }
+//  interface circle {
+//   radius: number
+//  }
 
- const circleArea = (c: circle) => {
-  console.log(Math.PI * Math.pow(c.radius, 2))
- }
+//  const circleArea = (c: circle) => {
+//   console.log(Math.PI * Math.pow(c.radius, 2))
+//  }
 
- const circleRadius = {
-  radius: 2
- }
+//  const circleRadius = {
+//   radius: 2
+//  }
 
- circleArea(circleRadius)
+//  circleArea(circleRadius)
 
- type Model = 'A'|'B'|'C'
+//  type Model = 'A'|'B'|'C'
 
- interface Vehicle {
-  model: Model,
-  registrationNo: string, 
-  manufacture: string,
-  registrationYear: number
- }
+//  interface Vehicle {
+//   model: Model,
+//   registrationNo: string, 
+//   manufacture: string,
+//   registrationYear: number
+//  }
 
- interface BMW extends Vehicle {
-  avatar: string
- }
+//  interface BMW extends Vehicle {
+//   avatar: string
+//  }
 
- 
+let myArr = ['12-24-2014', '09-23-2022', '12-30-2021', '07-15-2018']
+
+const fixDate = (array: any) => {
+  for(let i = 0; i < array.length; i++) {
+    const date = new Date(array[i])
+    const newFormat = `${date.getDate()}-${date.getMonth()}-${date.getFullYear()}`
+    array[i] = newFormat
+  }
+  return array
+}
 
 
+console.log('suraj')
+
+console.log(fixDate(myArr))
 
   
   return (

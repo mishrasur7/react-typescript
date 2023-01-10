@@ -176,6 +176,17 @@ const isPrime = (num:any) => {
 
 console.log(isPrime(6))
 
+const checkPallindrome = (string:String) => {
+  for(let i = 0; i < string.length/2; i++) {
+    if(string[i] !== string[string.length - 1 - i]) {
+      return 'No palindrome'
+    }
+  }
+  return 'Palindrome'
+}
+
+console.log(checkPallindrome('madamk'))
+
   
   return (
     <div className="App">

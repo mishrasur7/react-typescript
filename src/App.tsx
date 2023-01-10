@@ -188,13 +188,13 @@ const checkPalindrome = (string:String) => {
 console.log(checkPalindrome('madamk'))
 
 const checkPalindromeUsingbuiltInFunctions = (string: String) => {
-  console.log(string)
+  
   const stringArray = string.split('')
-  console.log(stringArray)
+  
   const reverseArray = stringArray.reverse()
-  console.log(reverseArray)
+  
   const stringAfterReverse = reverseArray.join('')
-  console.log(stringAfterReverse)
+  
 
   if(string === stringAfterReverse) {
     return 'Palindrome'

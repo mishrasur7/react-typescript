@@ -176,7 +176,7 @@ const isPrime = (num:any) => {
 
 console.log(isPrime(6))
 
-const checkPallindrome = (string:String) => {
+const checkPalindrome = (string:String) => {
   for(let i = 0; i < string.length/2; i++) {
     if(string[i] !== string[string.length - 1 - i]) {
       return 'No palindrome'
@@ -185,8 +185,25 @@ const checkPallindrome = (string:String) => {
   return 'Palindrome'
 }
 
-console.log(checkPallindrome('madamk'))
+console.log(checkPalindrome('madamk'))
 
+const checkPalindromeUsingbuiltInFunctions = (string: String) => {
+  console.log(string)
+  const stringArray = string.split('')
+  console.log(stringArray)
+  const reverseArray = stringArray.reverse()
+  console.log(reverseArray)
+  const stringAfterReverse = reverseArray.join('')
+  console.log(stringAfterReverse)
+
+  if(string === stringAfterReverse) {
+    return 'Palindrome'
+  } 
+  return 'Not palindrome'
+}
+
+const string = String(prompt('Enter a string'))
+console.log(checkPalindromeUsingbuiltInFunctions(string))
   
   return (
     <div className="App">
